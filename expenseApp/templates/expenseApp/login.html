@@ -1,0 +1,55 @@
+{% load static %}
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+
+        <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <header class="header">
+                {% comment %} <h1>Login</h1> {% endcomment %}
+            </header>
+
+            <div class="login-section">
+
+                <div class="username">
+                    <input type="text" class="type" name="username" placeholder="Username">
+                </div>
+
+                <hr>
+
+                <div class="password">
+                    <input type="text" class="type" name="password" placeholder="Password">
+                </div>
+
+                <hr>               
+                
+            </div>
+
+            <div class="login-button">
+                <button>Login</button>
+            </div>
+
+        </div>
+        
+
+    </body>
+
+</html>

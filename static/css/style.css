@@ -1,0 +1,131 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #fff;
+    height: 100vh;
+}
+
+.container {
+    /* biggest mobile screen out there apparently */
+    max-width: 428px; 
+    /* to auto center */
+    margin: 0 auto;
+    background-color: #313438;
+    
+}
+
+.header {
+    /* to align things next to each other  */
+    /* display: flex; */
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
+    padding: 2em 0;
+    /* align-items: center; */
+}
+
+.month-name {
+    /* font-size: 1.5em; */
+    padding-left: 1.9em;
+    padding-bottom: 0%;
+}
+
+.month-total {
+    /* font-size: 1.2em; */
+    padding-left: 2em;
+    padding-top: 0%;
+}
+
+.add-button {
+    /* to align things next to each other  */
+    display: flex;
+    /* justify-content: space-evenly; */
+    padding-left: 2em;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.more-transactions-button {
+    /* to align things next to each other  */
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 2em 0; */
+    align-items: center;
+}
+
+i {
+    font-size: 2.5em;
+}
+
+i:hover {
+    font-size: 2.6em;
+}
+
+a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+.transaction-name {
+    font-size: 1.2em;
+}
+
+.transaction-date {
+    font-size: .8em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+hr {
+    border: 1px solid #494a4b;
+}
+
+.transaction-item {
+    list-style: none;
+}
+
+.transaction-category {
+    width: 4em;
+    text-align: center;
+    padding: .4em .5em;
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    background-color: #75a85e;
+    font-size: .6em;
+}
+
+.transaction-section {
+    display: flex;
+    transition: 0.3s;
+}
+
+.transaction-item {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 0 3em;
+    
+}
+
+.transaction-section:hover {
+    background-color: #48494a;
+}
+

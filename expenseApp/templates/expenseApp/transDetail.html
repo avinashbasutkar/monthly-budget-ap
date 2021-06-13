@@ -1,0 +1,61 @@
+{% load static %}
+
+<html>
+
+    <head>
+        <title>Detail</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/addTrans.css' %}">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+        
+            <header class="header">
+                <h2>Transaction Details</h2>
+            </header>
+
+            <section class="new-transaction">
+
+                <div class="new-transaction-form">
+                    <input type="text" class="type" name="itemname" value="{{ transactions.itemName }}">
+                </div>
+
+                <hr>
+
+                <div class="new-transaction-form">
+                    <input type="text" class="type" name="amount" value="{{ transactions.itemPrice }}">
+                </div>
+
+                <hr>
+
+                <div class="new-transaction-form">
+                    <input type="text" class="type" name="datetime" value="{{ transactions.transactionDate }}">
+                </div>
+
+                <hr>
+
+                <div class="new-transaction-form">
+                    <input type="text" class="type" name="category" value="{{ transactions.category }}">
+                </div>
+
+                <hr>
+
+            </section>
+
+            <section class="save-button">
+                <button type="submit" class="button">Save</button>
+                <a href="{% url 'home' %}"><h3>Cancel</h3></i></a>
+                <h3>Delete</h3>
+            <section>
+
+        </div>
+
+    </body>
+
+</html>

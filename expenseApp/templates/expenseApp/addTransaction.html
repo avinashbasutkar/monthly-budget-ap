@@ -1,0 +1,67 @@
+{% load static %}
+
+<html>
+
+    <head>
+        <title>Add Transaction</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/addTrans.css' %}">
+
+    </head>
+    
+    <body>
+
+        <div class="container">
+
+            <header class="header">
+                <h2>Add a Transaction</h2>
+            </header>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <section class="new-transaction">
+
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="itemname" placeholder="Item name">
+                    </div>
+
+                    <hr>
+
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="amount" placeholder="Amount">
+                    </div>
+
+                    <hr>
+
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="datetime" placeholder="Date & Time">
+                    </div>
+
+                    <hr>
+
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="category" placeholder="Category">
+                    </div>
+
+                    <hr>
+
+                </section>
+
+            
+
+                <section class="save-button">
+                    <button type="submit" class="button">Save</button>
+                    <a href="{% url 'home' %}"><h3>Cancel</h3></i></a>
+                <section>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>

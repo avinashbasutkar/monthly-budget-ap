@@ -1,0 +1,76 @@
+{% load static %}
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Expense</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
+        <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+ 
+        <div class="container">
+            <header class="header">
+
+                <div class="month-section">
+
+                        <ul class="month-item">
+                            <h2 class="month-name">October</h2>
+                            <h2 class="month-total">50000</h2>
+                        </ul>
+                        
+                </div>
+
+            </header>
+
+            <section class="transactions-library">
+                {% for i in transactions reversed %}
+
+                <a href="{% url 'transDetail' i.id %}" style="text-decoration: none;">
+
+                    <ul class="transactions-list">
+                        <div class="transaction-section">
+
+                            <li class="transaction-item">                          
+
+                                <p class="transaction-name">{{ i.itemName }}</p>
+                                <p class="transaction-category">{{ i.category }}</p>
+                                
+                            </li>
+
+                            <li class="transaction-item">
+                            
+                                <p class="transaction-date">{{ i.transactionDate|date:"M d" }}</p>
+                                <p class="transaction-cost">{{ i.itemPrice }}</p>
+                                
+                            </li>   
+
+                        </div>
+                        
+                        <hr>
+
+                        
+                            
+                    </ul>
+                {% endfor %}
+
+                <h4 class="more-transactions-button">More Transactions</h4>
+
+            </section>
+
+            <section class="add-button">
+                <a href="{% url 'addTransaction' %}"><i class="fas fa-plus add"></i></a>
+            </section>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
