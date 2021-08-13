@@ -7,7 +7,7 @@ body {
 
 .container {
     /* biggest mobile screen out there apparently */
-    max-width: 428px; 
+    /* max-width: 428px;  */
     /* to auto center */
     margin: 0 auto;
     background-color: #313438;

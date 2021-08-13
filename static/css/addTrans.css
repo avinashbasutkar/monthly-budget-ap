@@ -7,7 +7,7 @@ body {
 
 .container {
     /* biggest mobile screen out there apparently */
-    max-width: 428px; 
+    /* max-width: 428px;  */
     /* to auto center */
     margin: 0 auto;
     background-color: #313438;
@@ -51,8 +51,21 @@ hr {
 }
 
 .save-button {
+    display: flex;
     padding-left: 1.5em;
     padding-bottom: 22em;
+    border-radius: 20px;
+    box-shadow:  6px 6px 12px #2d2f33, 
+             -6px -6px 12px #35393d;
+}
+
+.button {
+    background-color: #313438;
+    border: none;
+    color: #fff;
+    font-size: 1.3em;
+    outline: none;
+    cursor: pointer;
 }
 
 a:link {
