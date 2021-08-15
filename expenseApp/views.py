@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Transactions
+from django.db.models import Sum
 
 # Create your views here.
 
 def home(request):
     transactions = Transactions.objects.all()
-    return render(request, "expenseApp/home.html", {'transactions':transactions})
+    itemPriceTotal = Transactions.objects.all().aggregate(Sum('itemPrice'))
+    return render(request, "expenseApp/home.html", {'transactions':transactions, 'itemPriceTotal':itemPriceTotal})
 
 def addTransaction(request):
     if request.method == 'POST':
