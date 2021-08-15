@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Transactions
 from django.db.models import Sum
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -26,6 +28,12 @@ def addTransaction(request):
 def transDetail(request, transaction_id):
     transactions = Transactions.objects.get(id=transaction_id)
     return render(request, "expenseApp/transDetail.html", {'transactions':transactions})
+
+def deleteExpense(request, transaction_id):
+    transaction = Transactions.objects.get(id=transaction_id)
+    transaction.delete()
+    messages.success(request, 'Expense removed!')
+    return redirect('/')
 
 def login(request):
     return render(request, "expenseApp/login.html")
