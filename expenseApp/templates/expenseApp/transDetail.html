@@ -20,39 +20,44 @@
                 <h2>Transaction Details</h2>
             </header>
 
-            <section class="new-transaction">
+            <form action="" method="POST">
+                {% csrf_token %}
 
-                <div class="new-transaction-form">
-                    <input type="text" class="type" name="itemname" value="{{ transactions.itemName }}">
-                </div>
+                <section class="new-transaction">
 
-                <hr>
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="itemname" value="{{ transactions.itemName }}">
+                    </div>
 
-                <div class="new-transaction-form">
-                    <input type="text" class="type" name="amount" value="{{ transactions.itemPrice }}">
-                </div>
+                    <hr>
 
-                <hr>
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="amount" value="{{ transactions.itemPrice }}">
+                    </div>
 
-                <div class="new-transaction-form">
-                    <input type="text" class="type" name="datetime" value="{{ transactions.transactionDate }}">
-                </div>
+                    <hr>
 
-                <hr>
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="datetime" value="{{ transactions.transactionDate }}">
+                    </div>
 
-                <div class="new-transaction-form">
-                    <input type="text" class="type" name="category" value="{{ transactions.category }}">
-                </div>
+                    <hr>
 
-                <hr>
+                    <div class="new-transaction-form">
+                        <input type="text" class="type" name="category" value="{{ transactions.category }}">
+                    </div>
 
-            </section>
+                    <hr>
 
-            <section class="save-button">
-                <button type="submit" class="button">Save</button>
-                <a href="{% url 'home' %}"><h3>Cancel</h3></i></a>
-                <a href="{% url 'deleteExpense' transactions.id %}"><h3>Delete</h3></i></a>
-            <section>
+                </section>
+
+                <section class="save-button">
+                    <a href="{% url 'updateExpense' transactions.id %}"><h3>Update</h3></a>
+                    <a href="{% url 'home' %}"><h3>Cancel</h3></a>
+                    <a href="{% url 'deleteExpense' transactions.id %}"><h3>Delete</h3></a>
+                <section>
+
+            </form>
 
         </div>
 

@@ -29,6 +29,12 @@ def transDetail(request, transaction_id):
     transactions = Transactions.objects.get(id=transaction_id)
     return render(request, "expenseApp/transDetail.html", {'transactions':transactions})
 
+def updateExpense(request, transaction_id):
+    transaction = Transactions.objects.get(id=transaction_id)
+    transaction.save()
+    messages.success(request, 'Expense updated!')
+    return redirect('/')
+
 def deleteExpense(request, transaction_id):
     transaction = Transactions.objects.get(id=transaction_id)
     transaction.delete()
