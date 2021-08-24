@@ -1,0 +1,90 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    color: #fff;
+    height: 100vh;
+}
+
+.container {
+    /* biggest mobile screen out there apparently */
+    /* max-width: 428px;  */
+    /* to auto center */
+    margin: 0 auto;
+    background-color: #313438;
+    
+}
+
+.header {
+    /* to align things next to each other  */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
+    padding: 2em 0;
+    /* align-items: center; */
+    text-indent: 50px;
+}
+
+.new-transaction-form {
+    /* padding-left: 1.5em; */
+    padding: .3em .3em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    box-shadow:  6px 6px 12px #2d2f33, 
+             -6px -6px 12px #35393d;
+}
+
+.type {
+    border: none;
+    background: none;
+    font-size: 1.2em;
+    color: #fff;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.update-button, .cancel-button, .delete-button {
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+#update-button,
+#cancel-button,
+#delete-button {
+    background-color: #35393d;
+    color: #35393d;
+    margin-top: 10px;
+    border-radius: 50px;
+    padding: 8px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}

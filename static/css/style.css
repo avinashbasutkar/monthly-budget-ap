@@ -18,7 +18,7 @@ body {
     /* to align things next to each other  */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
     padding: 2em 0;
     /* align-items: center; */
@@ -137,7 +137,7 @@ hr {
 .search {
     position: relative;
     height: 50px;
-    width: 50%;
+    /* width: 50%; */
     text-align: end;
 }
 

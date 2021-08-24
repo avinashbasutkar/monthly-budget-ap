@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="{% static '/css/addTrans.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/transDetail.css' %}">
 
     </head>
 
@@ -51,10 +51,20 @@
 
                 </section>
 
-                <section class="save-button">
-                    <a href="{% url 'updateExpense' transactions.id %}"><h3>Update</h3></a>
-                    <a href="{% url 'home' %}"><h3>Cancel</h3></a>
-                    <a href="{% url 'deleteExpense' transactions.id %}"><h3>Delete</h3></a>
+                <section class="buttons">
+
+                    <div class="update-button">
+                        <button id="update-button"><a href="{% url 'updateExpense' transactions.id %}">Update</a></button>
+                    </div>
+                    
+                    <div class="cancel-button">
+                        <button id="cancel-button"><a href="{% url 'home' %}">Cancel</a></button>
+                    </div>
+                    
+                    <div class="delete-button">
+                        <button id="delete-button"><a href="{% url 'deleteExpense' transactions.id %}">Delete</a></button>
+                    </div>
+                    
                 <section>
 
             </form>
