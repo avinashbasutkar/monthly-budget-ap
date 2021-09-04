@@ -1,11 +1,9 @@
 from django.shortcuts import render, redirect
+from django.views.generic.edit import UpdateView
 from django.http import HttpResponse
 from .models import Transactions
 from django.db.models import Sum
 from django.contrib import messages
-
-
-# Create your views here.
 
 def home(request):
     transactions = Transactions.objects.all()
@@ -27,13 +25,25 @@ def addTransaction(request):
 
 def transDetail(request, transaction_id):
     transactions = Transactions.objects.get(id=transaction_id)
-    return render(request, "expenseApp/transDetail.html", {'transactions':transactions})
+    return render(request, "expenseApp/transactions_form.html", {'transactions':transactions})
 
 def updateExpense(request, transaction_id):
     transaction = Transactions.objects.get(id=transaction_id)
+    transaction.itemName = request.POST.get('itemname')
     transaction.save()
     messages.success(request, 'Expense updated!')
     return redirect('/')
+
+class updateExpenseView(UpdateView):
+    model = Transactions
+
+    fields = [
+        "itemName",
+        "itemPrice",
+        "category"
+    ]
+
+    success_url = "/"
 
 def deleteExpense(request, transaction_id):
     transaction = Transactions.objects.get(id=transaction_id)
